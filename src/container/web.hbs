@@ -1,0 +1,135 @@
+{{#with web}}
+
+<h1>Languages</h1>
+<hr style="border-width: 3px;">
+<div>
+    <section>
+        <h3>
+            <ul>
+                <tt>
+                    <h2>
+                        <li>{{languages.[0].name}}</li>
+                    </h2>
+                    <li>{{languages.[0].version}}</li>
+                    <li>{{languages.[0].description}}</li>
+                </tt>
+            </ul>
+        </h3>
+
+        {{#each languages}}
+        {{!-- {{>webs}} --}}
+
+
+        {{#each elements}}
+        <ul>
+            <li>
+                <b>{{name}}</b>
+            </li>
+            <li>{{description}}</li>
+        </ul>
+
+        {{#each attributes}}
+        <ul>
+            <li>
+                <b>{{name}}</b>
+            </li>
+            <li>{{description}}</li>
+        </ul>
+
+        {{/each}}
+        {{/each}}
+        {{/each}}
+    </section>
+</div>
+<hr style="border-width: 3px;">
+<div>
+    <section>
+        <h3>
+            <tt>
+                <ul>
+                    <h2>
+                        <li>{{languages.[1].name}}</li>
+                    </h2>
+                    <li>{{languages.[1].version}}</li>
+                    <li>{{languages.[1].description}}</li>
+                </ul>
+            </tt>
+        </h3>
+        {{#each languages}}
+
+        {{#each properties}}
+        <ul>
+            <b>{{name}}</b>
+            <li>{{description}}</li>
+        </ul>
+
+        {{#each values}}
+        <ul>
+            <b>{{value}}</b>
+            <li>{{description}}</li>
+        </ul>
+
+
+        {{/each}}
+        {{/each}}
+        {{/each}}
+
+
+    </section>
+</div>
+<hr style="border-width: 3px;">
+<div class="js">
+    <section>
+        <h3>
+            <ul>
+                <tt>
+                    <h2>
+                        <li>{{languages.[2].name}}</li>
+                    </h2>
+                    <li>{{languages.[2].version}}</li>
+                    <li>{{languages.[2].description}}</li>
+            </ul>
+            </tt>
+        </h3>
+        {{#each languages}}
+
+        {{#each functions}}
+        <ul>
+            <b>{{name}}</b>
+            <li>{{description}}</li>
+        </ul>
+
+        {{#each parameters}}
+        <ul>
+            <b>{{name}}</b>
+            <li>{{type}}</li>
+            <li>{{description}}</li>
+        </ul>
+
+
+        {{/each}}
+        {{/each}}
+        {{/each}}
+
+
+        {{!-- {{#each parameters}} --}}
+        {{name}}
+        {{description}}
+
+
+        {{#each parameters}}
+        <ul>
+            <li>{{name}}</li>
+            <li>{{type}}</li>
+            <li>{{description}}</li>
+        </ul>
+
+
+        {{!-- {{/each}} --}}
+        {{/each}}
+
+    </section>
+</div>
+
+
+{{/with}}
