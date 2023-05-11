@@ -1,0 +1,95 @@
+{{#with program}}
+<h1>Program</h1>
+{{#with excursion}}
+<ul>
+    <h3>
+        <li>{{name}}</li>
+    </h3>
+    <li>({{date}})</li>
+</ul>
+{{#with location}}
+<h3>{{city}} {{country}}</h3>
+{{/with}}
+<section>
+    <div>
+        {{#with program.[0]}}
+        <ul>
+            <li>{{name}}</li>
+            <li>{{type}}</li>
+            <li>{{duration}}</li>
+        </ul>
+        {{#with details}}
+
+        {{#with museum}}
+        <h3>{{name}}</h3>
+        {{#with location}}
+        <ul>
+            <li>{{address}}</li>
+            <li>{{city}}</li>
+            <li>{{country}}</li>
+        </ul>
+        {{/with}}
+        {{#each exhibits}}
+        <ul>
+            <li>{{name}}</li>
+            <li>{{artist}}</li>
+            <li>{{description}}</li>
+            <li> {{#if audio_guide}}A udio_guide{{/if}} </li>
+        </ul>
+
+        {{/each}}
+        {{/with}}
+        {{#with guide}}
+        <ul>
+            <li>{{name}}</li>
+            <li>{{language}}</li>
+            <li>{{rating}}</li>
+        </ul>
+        {{/with}}
+        {{/with}}
+        {{/with}}
+        {{!-- {{/each}} --}}
+    </div>
+</section>
+<hr>
+<section>
+    <div>
+        {{#with program.[1]}}
+        <ul>
+            <li>{{name}}</li>
+            <li>{{type}}</li>
+            <li>{{duration}}</li>
+        </ul>
+        {{#with details}}
+        {{#with venue}}
+        <h3>{{name}}</h3>
+        {{#with location}}
+        <ul>
+            <li>{{address}}</li>
+            <li>{{city}}</li>
+            <li>{{country}}</li>
+        </ul>
+        {{/with}}
+        {{/with}}
+        {{#each performers}}
+        <ul>
+            <li>{{name}}</li>
+            <li>{{type}}</li>
+        </ul>
+        {{/each}}
+        {{#with guide}}
+        <ul>
+            <li>{{name}}</li>
+            <li>{{language}}</li>
+            <li>{{rating}}</li>
+        </ul>
+        {{/with}}
+        {{/with}}
+        {{/with}}
+
+        {{!-- {{/each}} --}}
+    </div>
+</section>
+
+{{/with}}
+{{/with}}
