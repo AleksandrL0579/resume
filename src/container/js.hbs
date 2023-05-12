@@ -1,0 +1,44 @@
+<h1>{{name}}</h1>
+<h4><span class="badge bg-secondary">{{description}}</span></h4>
+
+
+<button type="button" class="btn btn-outline-dark">{{history.year}}</button>
+<button type="button" class="btn btn-outline-dark">{{history.founder}}</button>
+
+<br>
+<br>
+
+{{#with types}}
+<button type="button" class="btn btn-outline-dark">{{this}}</button>
+{{/with}}
+
+<hr>
+{{#with syntax}}
+<ul>
+    <li><button type="button" class="btn btn-primary">{{variables}}</button></li><br>
+    <li><button type="button" class="btn btn-primary">{{functions}}</button></li><br>
+    <li><button type="button" class="btn btn-primary">{{conditionals}}</button></li><br>
+    <li><button type="button" class="btn btn-primary">{{loops}}</button></li><br>
+    <li><button type="button" class="btn btn-primary">{{classes}}</button></li>
+</ul>
+{{/with}}
+
+<hr>
+{{#with features}}
+<h3>{{this}}<span class="badge bg-secondary"></span></h3>
+{{/with}}
+<hr>
+{{#with libraries}}
+<h4><span class="badge bg-secondary">{{this}}</span></h4>
+{{/with}}
+<hr>
+{{#with tools}}
+<h3>{{this}}<span class="badge bg-secondary"></span></h3>
+{{/with}}
+<hr>
+{{#each community}}
+<ul>
+    <li><button type="button" class="btn btn-primary">{{name}}</button></li>
+    <li><button type="button" class="btn btn-danger">{{type}}</button></li>
+</ul>
+{{/each}}
