@@ -1,0 +1,167 @@
+<h1>{{name}}</h1>
+<section>
+    <div>
+        {{>title data='users'}}
+        {{#each users}}
+        <section>
+            <ul>
+                <li>id - {{id}}</li>
+                <li>name - {{name}}</li>
+                <li>gender - {{gender}}</li>
+                <li>age - {{age}}</li>
+            </ul>
+    </div>
+    <div>
+        {{>title data='friends'}}
+        {{#each friends}}
+        <ul>
+            <li>id - {{id}}</li>
+            <li>name - {{name}}</li>
+            <li>gender - {{gender}}</li>
+            <li>age - {{age}}</li>
+        </ul>
+    </div>
+    <div>
+        {{>title data='mutual_friends'}}
+        <ul>
+            {{#each mutual_friends}}
+
+            <li>id - {{id}}</li>
+            <li>name - {{name}}</li>
+            <li>gender - {{gender}}</li>
+            <li>age - {{age}}</li>
+
+            {{/each}}
+        </ul>
+    </div>
+
+
+
+</section>
+{{/each}}
+<hr>
+</section>
+
+<section>
+    {{>title data='friends'}}
+    {{#each friends}}
+
+    <ul>
+        <li>id - {{id}}</li>
+        <li>name - {{name}}</li>
+        <li>gender - {{gender}}</li>
+        <li>age - {{age}}</li>
+    </ul>
+    {{>title data='mutual_friends'}}
+    {{#each mutual_friends}}
+    <ul>
+        <li>id - {{id}}</li>
+        <li>name - {{name}}</li>
+        <li>gender - {{gender}}</li>
+        <li>age - {{age}}</li>
+    </ul>
+    {{/each}}
+
+    {{/each}}
+
+</section>
+
+<section>
+    {{>title data='groups'}}
+    {{#each groups}}
+
+    <ul>
+        <li>id - {{id}}</li>
+        <li>name - {{name}}</li>
+        <li>description - {{description}}</li>
+    </ul>
+    {{>title data='members'}}
+    {{#each members}}
+    <ul>
+        <li>id - {{id}}</li>
+        <li>name - {{name}}</li>
+        <li>gender - {{gender}}</li>
+        <li>age - {{age}}</li>
+    </ul>
+    {{/each}}
+    {{>title data='groups'}}
+    {{#each groups}}
+    <ul>
+        <li>id - {{id}}</li>
+        <li>name - {{name}}</li>
+        <li>description - {{description}}</li>
+    </ul>
+    {{>title data='members'}}
+    {{#each members}}
+    <ul>
+        <li>id - {{id}}</li>
+        <li>name - {{name}}</li>
+        <li>gender - {{gender}}</li>
+        <li>age - {{age}}</li>
+    </ul>
+    {{/each}}
+    {{/each}}
+    <ul>
+        <li>id - {{id}}</li>
+        <li>name - {{name}}</li>
+        <li>description - {{description}}</li>
+    </ul>
+    {{>title data='members'}}
+    {{#each members}}
+    <ul>
+        <li>id - {{id}}</li>
+        <li>name - {{name}}</li>
+        <li>gender - {{gender}}</li>
+        <li>age - {{age}}</li>
+    </ul>
+    {{/each}}
+
+    {{/each}}
+</section>
+<section>
+
+    {{#each friends}}
+
+    <ul>
+        <li>id - {{id}}</li>
+        <li>name - {{name}}</li>
+        <li>gender - {{gender}}</li>
+        <li>age - {{age}}</li>
+    </ul>
+    </div>
+    {{!-- {{/each}} --}}
+    <div>
+        {{>title data='mutual_friends'}}
+        <ul>
+            {{#each mutual_friends}}
+
+            <li>id - {{id}}</li>
+            <li>name - {{name}}</li>
+            <li>gender - {{gender}}</li>
+            <li>age - {{age}}</li>
+
+            {{/each}}
+        </ul>
+    </div>
+    {{/each}}
+    {{>title data='groups'}}
+    {{#each groups}}
+
+    <ul>
+        <li>id - {{id}}</li>
+        <li>name - {{name}}</li>
+        <li>description - {{description}}</li>
+    </ul>
+    {{>title data='members'}}
+    {{#each members}}
+    <ul>
+        <li>id - {{id}}</li>
+        <li>name - {{name}}</li>
+        <li>gender - {{gender}}</li>
+        <li>age - {{age}}</li>
+    </ul>
+    {{/each}}
+    {{/each}}
+
+</section>
+{{/each}}
