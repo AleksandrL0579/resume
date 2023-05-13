@@ -1,0 +1,114 @@
+<h1>{{make}}
+    {{model}}
+    {{year}}
+    {{color}}
+</h1>
+{{#with features}}
+<section>
+    {{#with interior}}
+    {{#with seats}}
+    <ul>
+
+        <li><button type="button" class="btn btn-info">{{material}}</button></li>
+        <li><button type="button" class="btn btn-info">{{color}}</button></li>
+        <li><button type="button" class="btn btn-info">{{#if heated}}heated{{/if}}</button></li>
+        <li><button type="button" class="btn btn-info">{{#if ventilated}}ventilated{{/if}}</button></li>
+    </ul>
+    {{/with}}
+    {{#with dashboard}}
+    <ul>
+        <li>{{material}}</li>
+        <li>{{color}}</li>
+    </ul>
+    {{#each display}}
+    {{this}}
+    {{/each}}
+    {{/with}}
+    {{#with audio}}
+    <ul>
+        <li>{{system}}</li>
+        <li>{{speakers}}</li>
+        <li>{{#if subwoofer}}subwoofer{{/if}}</li>
+        <li>{{#if bluetooth}}bluetooth{{/if}}</li>
+        <li>{{#if USB}}USB{{/if}}</li>
+    </ul>
+    {{/with}}
+    {{/with}}
+</section>
+<hr>
+<section>
+    {{#with exterior}}
+    {{#with wheels}}
+    <ul>
+        <li>{{size}}</li>
+        <li>{{type}}</li>
+        <li>{{color}}</li>
+    </ul>
+    {{/with}}
+    {{#with headlights}}
+    <ul>
+        <li>{{type}}</li>
+        <li>{{brightness}}</li>
+        <li>{{#if automatic}}automatic{{/if}}</li>
+    </ul>
+    {{/with}}
+    {{#with sunroof}}
+    <ul>
+        <li>{{type}}</li>
+        <li>{{size}}</li>
+        <li>{{#if automatic}}automatic{{/if}}</li>
+    </ul>
+    {{/with}}
+    {{/with}}
+</section>
+<hr>
+<section>
+    {{#with safety}}
+    {{#with airbags}}
+    <ul>
+        <li>
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">front</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">{{front}}</li>
+                </ol>
+            </nav>
+        </li>
+        <li>
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">side</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">{{side}}</li>
+                </ol>
+            </nav>
+        </li>
+        <li>
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">knee</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">{{knee}}</li>
+                </ol>
+            </nav>
+        </li>
+        <li>
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">rear</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">{{rear}}</li>
+                </ol>
+            </nav>
+        </li>
+    </ul>
+    {{/with}}
+    {{#with assistance}}
+    <ul>
+        <li>{{#if blind_spot_monitoring}}blind_spot_monitoring{{/if}}</li>
+        <li>{{#if rear_cross_traffic_alert}}rear_cross_traffic_alert{{/if}}</li>
+        <li>{{#if lane_departure_warning}}lane_departure_warning{{/if}}</li>
+        <li>{{#if adaptive_cruise_control}}adaptive_cruise_control{{/if}}</li>
+        <li>{{#if collision_warning}}collision_warning{{/if}}</li>
+    </ul>
+    {{/with}}
+    {{/with}}
+</section>
+{{/with}}
