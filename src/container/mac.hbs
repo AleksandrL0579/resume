@@ -1,0 +1,124 @@
+<section>
+    <h1>
+        <p class="text-warning bg-dark">{{name}}</p>
+    </h1>
+    <hr>
+    <h3>
+        <p class="font-monospace">{{description}}</p>
+    </h3>
+    <h3>
+        <p class="font-monospace">
+            price: {{price}}
+        </p>
+    </h3>
+    <h3>
+        <p class="font-monospace">
+            category: {{category}}
+        </p>
+    </h3>
+    <hr>
+    {{#with features}}
+    <a href="#" class="text-decoration-none">{{>title data='processor'}}</a>
+    {{#with processor}}
+    <ul>
+        <li>brand - {{brand}}</li>
+        <li>model - {{model}}</li>
+        <li>speed - {{speed}}</li>
+        <li>cores - {{cores}}</li>
+        <li>cache - {{cache}}</li>
+    </ul>
+    {{/with}}
+    <a href="#" class="text-decoration-none">{{>title data='memory'}}</a>
+
+    {{#with memory}}
+    <ul>
+        <li>type - {{type}}</li>
+        <li>size - {{size}}</li>
+        <li>speed - {{speed}}</li>
+    </ul>
+    {{/with}}
+    <a href="#" class="text-decoration-none">{{>title data='storage'}}</a>
+
+    {{#with storage}}
+    <ul>
+        <li>type - {{type}}</li>
+        <li>size - {{size}}</li>
+    </ul>
+    {{/with}}
+    <a href="#" class="text-decoration-none">{{>title data='display'}}</a>
+
+    {{#with display}}
+    <ul>
+        <li>size - {{size}}</li>
+        <li>resolution - {{resolution}}</li>
+        <li>technology - {{technology}}</li>
+        <li>color_space - {{color_space}}</li>
+        <li>brightness - {{brightness}}</li>
+        <li>refresh_rate - {{refresh_rate}}</li>
+    </ul>
+    {{/with}}
+    <a href="#" class="text-decoration-none">{{>title data='graphics'}}</a>
+
+    {{#with graphics}}
+    <ul>
+        <li>brand - {{brand}}</li>
+        <li>model - {{model}}</li>
+        <li>memory - {{memory}}</li>
+    </ul>
+    {{/with}}
+    <a href="#" class="text-decoration-none">{{>title data='ports'}}</a>
+
+    {{#each ports}}
+    <ul>
+        <li>type - {{type}}</li>
+        <li>count - {{count}}</li>
+    </ul>
+    {{#each features}}
+    {{this}}
+    {{/each}}
+    {{/each}}
+    <a href="#" class="text-decoration-none">{{>title data='battery'}}</a>
+
+    {{#with battery}}
+    <ul>
+        <li>type - {{type}}</li>
+        <li>capacity - {{capacity}}</li>
+        <li>life - {{life}}</li>
+        <li>weight - {{weight}}</li>
+    </ul>
+    {{/with}}
+    <a href="#" class="text-decoration-none">{{>title data='weight'}}</a>
+
+    <ul>
+        <li>weight - {{weight}}</li>
+    </ul>
+    <a href="#" class="text-decoration-none">{{>title data='dimensions'}}</a>
+    {{#with dimensions}}
+    <ul>
+        <li>width - {{width}}</li>
+        <li>height - {{height}}</li>
+        <li>depth - {{depth}}</li>
+    </ul>
+    {{/with}}
+    <a href="#" class="text-decoration-none">{{>title data='operating_system'}}</a>
+
+    <ul>
+        <li>operating_system - {{operating_system}}</li>
+    </ul>
+    <a href="#" class="text-decoration-none">{{>title data='accessories'}}</a>
+    {{#each accessories}}
+    <ul>
+        <li>name - {{name}}</li>
+        <li>price - {{price}}</li>
+    </ul>
+    {{/each}}
+
+
+
+
+
+
+
+
+    {{/with}}
+</section>

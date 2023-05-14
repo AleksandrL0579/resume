@@ -1,0 +1,105 @@
+<div>
+    <section>
+        <h1>{{name}}</h1>
+        {{#each users}}
+
+        {{>title data='users'}}
+        {{>face}}
+
+        {{>title data='friends'}}
+        {{#each friends}}
+        {{>face}}
+
+        {{>title data='mutual_friends'}}
+        {{#each mutual_friends}}
+        {{>face}}
+        {{/each}}
+        {{/each}}
+
+        {{>title data='groups'}}
+        {{#each groups}}
+        {{>groups}}
+
+        {{>title data='members'}}
+        {{#each members}}
+        {{>face}}
+        {{/each}}
+
+        {{/each}}
+        {{/each}}
+
+    </section>
+
+</div>
+
+
+
+
+
+
+
+
+
+{{!-- <section>
+    {{>title data='friends'}}
+    {{#each friends}}
+    {{>face}}
+    {{>title data='mutual_friends'}}
+    {{#each mutual_friends}}
+    {{>face}} --}}
+    {{!-- {{/each}}
+    {{/each}} --}}
+    {{!-- </section>
+{{/each}}
+{{/each}} --}}
+
+
+{{!-- {{>title data='groups'}}
+{{#each groups}}
+{{>groups}}
+{{>title data='members'}}
+{{#each members}}
+{{>face}} --}}
+{{!-- {{/each}} --}}
+
+
+
+{{!-- {{>title data='groups'}}
+{{#each groups}}
+{{>groups}}
+{{>title data='members'}}
+{{#each members}}
+{{>face}}
+{{/each}}
+{{/each}} --}}
+{{!-- {{>groups}}
+{{>title data='members'}}
+{{#each members}}
+{{>face}}
+{{/each}} --}}
+{{!-- {{/each}} --}}
+
+{{!-- {{/each}} --}}
+
+{{!-- <section>
+    <div>
+        {{#each friends}}
+        {{>face}}
+    </div>
+    <div>
+        {{>title data='mutual_friends'}}
+        {{#each mutual_friends}}
+        {{>face}}
+        {{/each}}
+    </div>
+    {{/each}}
+    {{>title data='groups'}}
+    {{#each groups}}
+    {{>groups}}
+    {{>title data='members'}}
+    {{#each members}}
+    {{>face}}
+    {{/each}}
+    {{/each}}
+</section> --}}
+{{!-- {{/each}} --}}
