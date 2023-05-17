@@ -1,0 +1,152 @@
+<main class="ms-5">
+    <section class="m-5">
+        <div class="row">
+            {{#with navigation}}
+            {{#each links}}
+            <div class="col-2">
+                <a href={{href}} class="btn btn-link">{{text}}</a>
+            </div>
+            {{/each}}
+            {{/with}}
+        </div>
+    </section>
+    <hr class="my-5">
+    <section>
+        {{#with newsBlock}}
+        <div class="display-2 text-center mb-3">
+            {{title}}
+        </div>
+        <div class="row">
+            {{#each cards}}
+            <div class="col-3 g-3">
+                <div class="card text-bg-dark text-light p-3">
+                    <h6 class="card-title">{{title}}</h6>
+                    <div>{{#if isTop}} <button class="btn btn-success rounded-pill">Нова</button> {{/if}}
+                        {{#if isNew}} <button class="btn btn-danger rounded-pill">Топ </button> {{/if}}</div>
+                    <p class="text-center text-light">{{description}}</p>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+        {{/with}}
+    </section>
+
+    <section>
+        {{#with goodsBlock}}
+        {{!-- {{#each tabs}} --}}
+        <div class="row g-4 mt-5">
+            <div class="col-12">
+
+                <div class="nav nav-tabs">
+                    {{#each tabs}}
+                    <div class="nav-item">
+
+                        <a href="#" class="nav-link active">{{#if isDisabled}} {{text}} {{/if}}</a>
+
+                    </div>
+                    {{!-- <div class="nav-item">
+                        <a href="#" class="nav-link mb-4"> {{#if isActive}} {{text}} {{/if}}</a>
+
+                    </div> --}}
+                    {{!-- <div class="nav-item">
+                        <a href="#" class="nav-link mb-4"> {{#if isActive}} {{text}} {{/if}}</a>
+
+                    </div>
+                    <div class="nav-item">
+                        <a href="#" class="nav-link mb-4"> {{#if isActive}} {{text}} {{/if}}</a>
+
+                    </div> --}}
+                    {{/each}}
+                </div>
+
+            </div>
+        </div>
+        {{!-- {{/each}} --}}
+
+        <div class="row mt-5">
+            {{#each cards}}
+            <div class="col-4 mt-5 g-3">
+                <div>
+                    <img class="card-img-top" src={{image}} alt="photo">
+                </div>
+                <div class="card p-1">
+                    <div class="card-title">
+                        <h6 class="mt-1">{{title}}
+                            {{#if isHot}} <button class="btn btn-success btn-sm rounded-pill">Нова</button> {{/if}}
+                            {{#if isNew}} <button class="btn btn-danger btn-sm rounded-pill">Топ </button> {{/if}}
+                        </h6>
+                    </div>
+                    <p class="text-center">{{description}}</p>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+        {{/with}}
+    </section>
+
+    <section>
+        {{#with subscribe}}
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="alert alert-dark">
+                    <div>
+                        <h2>{{header}}</h2>
+                    </div>
+                    <div>
+                        <p>{{description}}</p>
+                    </div>
+                    {{#each buttons}}
+                    <div>
+                        <a href={{link}} class="btn btn-primary m-2">{{text}}</a>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+        {{/with}}
+    </section>
+
+    <section>
+        {{#with service}}
+        <div class="row text-center mt-5">
+            <div class="col-12">
+                <div class="alert alert-success">
+                    <div>
+                        <h2>{{title}}</h2>
+                    </div>
+                    <div>
+                        <p>{{description}}</p>
+                    </div>
+                    {{#each buttons}}
+                    <div>
+                        <a href={{link}} class="btn btn-primary m-2">{{text}}</a>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+        {{/with}}
+    </section>
+
+    <section>
+        <div class="row">
+            {{#each footer}}
+            {{#each []}}
+            <div class="col-3">
+                <a href={{link}} class="btn btn-link m-2">{{text}}</a>
+            </div>
+            {{/each}}
+            {{/each}}
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+</main>
