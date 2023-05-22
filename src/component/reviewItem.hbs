@@ -1,0 +1,80 @@
+<hr class="m-5">
+<section class="m-5">
+    {{#each reviewList}}
+    <div>
+        <div class="card my-5">
+            <div class="card-body">
+                <div class="card">
+                    <div class="card-body">
+                        {{#with title}}
+                        <h5>{{userName}}</h5>
+                        <div>{{caption}}</div>
+                        <div>{{date}}</div>
+                        {{/with}}
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        {{#with reviewBody}}
+                        {{#with seller}}
+                        <p>{{title}}: {{value}}</p>
+                        {{/with}}
+                        {{#with rating}}
+                        <p class="mt-4">{{title}}: {{value}}</p>
+                        {{/with}}
+                        {{#with text}}
+                        <p class="mt-4">{{this}}</p>
+                        {{/with}}
+                        {{#with advantages}}
+                        <div class="mt-4">
+                            <h6>{{title}}:</h6>
+                        </div>
+                        <div>
+                            <p>{{text}}</p>
+                        </div>
+                        {{/with}}
+                        {{#with disadvantages}}
+                        <div class="mt-4">
+                            <h6>{{title}}:</h6>
+                        </div>
+                        <div>
+                            <p>{{text}}</p>
+                        </div>
+                        {{/with}}
+
+                        {{#with images}}
+                        <div class=" ps-1 pt-1 mt-4">
+                            <img src="{{this.[0]}}" alt="" class="">
+                            <img src="{{this.[1]}}" alt="" class="">
+                            <img src="{{this.[2]}}" alt="" class="">
+
+                        </div>
+
+                        {{/with}}
+
+
+                    </div>
+                </div>
+
+                {{#each coments}}
+                <div class="card mt-5 ms-5">
+                    <div class="card-body">
+
+                        <h5>{{userName}}</h5>
+                        <div>{{date}}</div>
+                        <div>{{text}}</div>
+
+                    </div>
+                </div>
+                {{/each}}
+
+
+
+                {{/with}}
+
+            </div>
+        </div>
+    </div>
+    {{/each}}
+    <hr class="m-5">
+</section>
