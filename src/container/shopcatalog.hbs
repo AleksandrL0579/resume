@@ -1,0 +1,187 @@
+<main class="p-5">
+
+    <section class="m-5">
+        {{#with navigation}}
+        <div class="col-9">
+            <div class="row">
+                <div class="col-12">
+                    <ol class="breadcrumb">
+                        {{#with links.[0]}}
+                        <div class="breadcrumb-item"><a href={{href}}>{{text}}</a></div>
+                        {{/with}}
+                        {{#with links.[1]}}
+                        <div class="breadcrumb mx-2"><a href={{href}}>{{text}}</a></div>
+                        {{/with}}
+                        {{#with links.[2]}}
+                        <div class="breadcrumb-item"><a href={{href}}>{{text}}</a></div>
+                        {{/with}}
+                        {{#with links.[2]}}
+                        <div class="breadcrumb mx-2"><a href={{#if href}} {{text}} {{/if}}></a>Disabled</div>
+                        {{/with}}
+                        {{#if href}} {{text}} {{/if}}
+                    </ol>
+                </div>
+            </div>
+        </div>
+        {{/with}}
+    </section>
+
+
+
+    <section class="m-5">
+        <div class="col-9">
+            <div class="row">
+                <div class="col-12">
+                    <ol class="breadcrumb">
+                        {{#with breadcrumb.[0]}}
+                        <li class="breadcrumb-item"><a href=" {{url}}">{{name}}</a></li>
+                        {{/with}}
+                        {{#with breadcrumb.[1]}}
+                        <li class="breadcrumb-item"><a href="{{url}}">{{name}}</a></li>
+                        {{/with}}
+                        {{#with breadcrumb.[2]}}
+                        <li class="breadcrumb-item"><a href={{#if url}} {{name}} {{/if}}></a>{{name}}</li>
+                        {{/with}}
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="m-5">
+        <h2 class="ms-5">{{header}}</h2>
+        <div class="row">
+            <h3>{{title}}</h3>
+            <div class="col-10">
+                <div class="nav nav-tabs">
+                    {{#each sortBlock}}
+                    <div class=" col-3 m-4">
+                        <select class="form-select">
+                            <label class="">{{label}}</label>
+                            <option selected>{{placeholder}}</option>
+                            {{#each options}}
+                            <option value={{value}}>{{text}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="row">
+
+        <div class="col-4">
+            {{#with filterBlock}}
+            <div class="card my-">
+                <div class="card-body my-">
+                    {{#with sellers}}
+                    <label for="form-label my-4">{{title}}</label>
+                    {{#each list}}
+                    <div class="form-check my-2">
+                        <label class="form-check-label">{{value}}</label>
+                        <input name="" type="checkbox" class="form-check-input">
+                    </div>
+                    {{/each}}
+                    {{/with}}
+                    <hr class="m-3">
+                    {{#with brands}}
+                    <h5 class="my-5">{{title}}</h5>
+                    {{#with input}}
+                    <div class="card">
+                        <div class="card-body">
+                            {{placeholder}}
+                        </div>
+                    </div>
+                    {{/with}}
+                    <br class="m-3">
+                    {{#each options}}
+                    <div class="form-check my-2">
+                        <label class="form-check-label">{{value}}</label>
+                        <input name="" type="checkbox" class="form-check-input">
+                    </div>
+                    {{/each}}
+                    {{/with}}
+                    <hr class="m-3">
+                    {{#with price}}
+                    {{title}}
+                    {{#with range}}
+                    <div class="card my-4">
+                        <div class="card-body">
+                            {{from}}
+                        </div>
+                    </div>
+                    <div class="card my-2">
+                        <div class="card-body">
+                            {{to}}
+                        </div>
+                    </div>
+                    {{/with}}
+                    {{#with button}}
+                    <a href="{{link}}" class="btn btn-outline-dark my-4">{{text}}</a>
+                    {{/with}}
+                    {{/with}}
+                    {{#each filterList}}
+                    <hr class="m-3">
+                    <label for="form-label">{{title}}</label>
+                    {{#each options}}
+                    <div class="form-check my-2">
+                        <label class="form-check-label">{{value}}</label>
+                        <input name="" type="checkbox" class="form-check-input">
+                    </div>
+                    {{/each}}
+                    {{/each}}
+                </div>
+            </div>
+            {{/with}}
+        </div>
+
+        {{>catalogItem}}
+
+    </div>
+
+    <section class="m-5">
+        {{#with service}}
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="alert alert-success text-center">
+                    <div>
+                        <h2 class="text-light">{{title}}</h2>
+                    </div>
+                    <div>
+                        <p class="text-light">{{description}}</p>
+                    </div>
+                    {{#each buttons}}
+                    <div>
+                        <a href={{link}} class="btn btn-primary m-2">{{text}}</a>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+        {{/with}}
+    </section>
+
+    <hr class="m-5">
+
+    <section class="m-5">
+        <div class="row">
+            {{#each footer}}
+            <div class="col-2 list-group">
+                <div class="nav flex-column">
+                    {{#each this}}
+                    <div class="nav-item mt-4">
+                        <a href="{{link}}" class="nav-link {{#if @last}}disabled{{/if}} list-item"
+                            target="_blank">{{text}}</a>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </section>
+
+</main>
