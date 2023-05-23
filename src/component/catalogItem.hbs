@@ -1,0 +1,51 @@
+<div class="col-8 mb-2 g-">
+    <div class="row">
+        {{#each goodsList}}
+        <div class="col-6 mb-2 g-">
+            <div class="card p-1">
+                <img src={{img}} alt="photo">
+                <div class="card-body">
+                    {{#if isHot}}
+                    <span class="badge bg-warning text-uppercase rounded-pill">Hot!</span>
+                    {{/if}}
+                    {{#if isNew}}
+                    <span class="badge bg-primary text-uppercase rounded-pill">New!</span>
+                    {{/if}}
+                    <div class="my-3">
+                        {{#if isFast}} <button class="btn btn-success btn-sm">Швидка доставка</button> {{/if}}
+                    </div>
+                    <div class="my-3">
+                        {{#if isFree}} <button class="btn btn-secondary btn-sm">Безкоштовна доставка</button> {{/if}}
+                    </div>
+                    {{name}}
+                    {{#with review}}
+                    <div>
+                        {{amount}} {{text}}
+                    </div>
+                    {{/with}}
+                    <div>{{price}}</div>
+                    <div>{{delivery}}</div>
+
+                    {{#with buttons.[0]}}
+                    <div class="">
+                        <a href={{link}}
+                            class="btn {{#if isPrimary}}btn-outline-light{{else}}btn-warning{{/if}} btn-primary m-2">{{text}}</a>
+                    </div>
+                    {{/with}}
+                    {{#with buttons.[1]}}
+                    <div class="col-">
+                        <a href={{link}}
+                            class="btn {{#if isSecondary}}btn-outline-light{{else}}btn-secondary{{/if}} btn-secondary m-2">{{text}}</a>
+                    </div>
+                    {{/with}}
+                    {{#each characteristics}}
+                    <div class="my-3">
+                        {{title}}: {{value}}
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
