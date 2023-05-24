@@ -11,7 +11,7 @@
             {{>title data='All slills' big=true }}
             <ul>
                 {{#each skills}}
-                <li>
+                <li class="my-3">
                     {{name}}
                     {{#if point includeZero=true}} ({{point}}) {{/if}}
                     {{#if isTop}} (Top) {{/if}}
@@ -32,7 +32,7 @@
             {{>title data='My hobbies'}}
             <ol>
                 {{#each hobbies}}
-                <li>
+                <li class="my-3">
 
                     {{name}}
                     {{#if isMain}} (favourite) {{/if}}

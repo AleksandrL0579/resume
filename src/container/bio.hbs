@@ -1,14 +1,14 @@
-<div>
+<div class="p-5">
     {{!-- {{#with bio}} --}}
     <section>
         <div>
-            <h1>{{name}}</h1>
+            <h1 class="mb-4">{{name}}</h1>
             <h3>({{birthdate}}) - ({{deathdate}})</h3>
             <h3>{{deathplace}}</h3>
             <h3>{{nationality}}</h3>
             <h3>{{occupation}}</h3>
-            <hr>
-            <br>
+            <hr class="my-5">
+
             {{>title data='Known for'}}
             <ul>
                 <li>{{known_for}}</li>
@@ -24,8 +24,8 @@
                 <li>{{year}}</li>
             </ul>
             {{/each}}
-            <hr>
-            <br>
+            <hr class="my-5">
+
             {{#each notable_publications}}
             {{>title data='Notable publications'}}
             <ul>
@@ -34,8 +34,8 @@
                 <li>{{publisher}}</li>
             </ul>
             {{/each}}
-            <hr>
-            <br>
+            <hr class="my-5">
+
             {{>title data='Partners'}}
             {{#each partners}}
 
@@ -45,8 +45,8 @@
                 <li>{{years}}</li>
             </ul>
             {{/each}}
-            <hr>
-            <br>
+            <hr class="my-5">
+
             {{#each awards}}
             {{>title data='Awards'}}
             <ul>
@@ -55,8 +55,8 @@
                 <li>{{description}}</li>
             </ul>
             {{/each}}
-            <hr>
-            <br>
+            <hr class="my-5">
+
             {{>title data='Influences'}}
             <ul>
                 <li>{{influences}}</li>
@@ -69,8 +69,8 @@
             <ul>
                 <li>{{quotes}}</li>
             </ul>
-            <hr>
-            <br>
+            <hr class="my-5">
+
             {{#each major_discoveries}}
             {{>title data='Major discoveries'}}
             <ul>
@@ -79,8 +79,8 @@
                 <li>{{description}}</li>
             </ul>
             {{/each}}
-            <hr>
-            <br>
+            <hr class="my-5">
+
             {{>title data='Contributions'}}
             {{#each contributions}}
 
@@ -88,8 +88,8 @@
                 <li>{{this}}</li>
             </ul>
             {{/each}}
-            <hr>
-            <br>
+            <hr class="my-5">
+
         </div>
     </section>
 

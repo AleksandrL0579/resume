@@ -1,4 +1,4 @@
-<div>
+<div class="p-5">
     {{#with person}}
     <main>
         <section>
@@ -11,8 +11,8 @@
                 <address>{{this}} </address>
                 {{/each}}
             </div>
-            <hr>
-            <br>
+            <hr class="my-5">
+
         </section>
         <section>
             <div>
@@ -26,8 +26,7 @@
                         </ul>
                         {{/each}}
                     </div>
-                    <hr>
-                    <br>
+                    <hr class="my-5">
 
                     {{#each workExperience}}
                     <ul>
@@ -43,8 +42,7 @@
                             </div>
                         </li>
                     </ul>
-                    <hr>
-                    <br>
+                    <hr class="my-5">
 
                     {{#each employees}}
                     {{>title data='Employees'}}
@@ -62,8 +60,7 @@
                             <li>{{status}}</li>
                         </ul>
                     </div>
-                    <hr>
-                    <br>
+                    <hr class="my-5">
 
                     {{#each teams}}
 
@@ -96,13 +93,12 @@
 
                 {{#each projects}}
                 {{>title data='Projects'}}
-                <ul>
+                <ul class="my-3">
                     <li>{{name}}</li>
                     <li>{{description}}</li>
                     <li>{{technologies}}</li>
                 </ul>
-                <hr>
-                <br>
+                <hr class="my-5">
                 {{#each team_members }}
                 {{>title data='Team members'}}
                 <ul>
