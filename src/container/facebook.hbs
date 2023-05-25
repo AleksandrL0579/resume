@@ -1,32 +1,36 @@
 <div class="p-5">
     <section>
         <h1>{{name}}</h1>
-        {{#each users}}
 
+        {{#each users}}
         {{>title data='users'}}
         {{>face}}
 
-        {{>title data='friends'}}
         {{#each friends}}
+        {{>title data='friends'}}
         {{>face}}
 
-        {{>title data='mutual_friends'}}
         {{#each mutual_friends}}
+        {{>title data='mutual_friends'}}
         {{>face}}
+
         {{/each}}
         {{/each}}
 
-        {{>title data='groups'}}
         {{#each groups}}
+        {{>title data='groups'}}
         {{>groups}}
 
-        {{>title data='members'}}
         {{#each members}}
+        {{>title data='members'}}
         {{>face}}
         {{/each}}
 
         {{/each}}
+
+
         {{/each}}
+
 
     </section>
 
