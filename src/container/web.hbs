@@ -1,135 +1,137 @@
-{{#with web}}
+<main class="p-5">
+    {{#with web}}
 
-<h1>Languages</h1>
-<hr style="border-width: 3px;">
-<div>
-    <section>
-        <h3>
-            <ul>
-                <tt>
-                    <h2>
-                        <li>{{languages.[0].name}}</li>
-                    </h2>
-                    <li>{{languages.[0].version}}</li>
-                    <li>{{languages.[0].description}}</li>
-                </tt>
-            </ul>
-        </h3>
-
-        {{#each languages}}
-        {{!-- {{>webs}} --}}
-
-
-        {{#each elements}}
-        <ul>
-            <li>
-                <b>{{name}}</b>
-            </li>
-            <li>{{description}}</li>
-        </ul>
-
-        {{#each attributes}}
-        <ul>
-            <li>
-                <b>{{name}}</b>
-            </li>
-            <li>{{description}}</li>
-        </ul>
-
-        {{/each}}
-        {{/each}}
-        {{/each}}
-    </section>
-</div>
-<hr style="border-width: 3px;">
-<div>
-    <section>
-        <h3>
-            <tt>
+    <h1>Languages</h1>
+    <hr class="my-5">
+    <div>
+        <section>
+            <h3>
                 <ul>
-                    <h2>
-                        <li>{{languages.[1].name}}</li>
-                    </h2>
-                    <li>{{languages.[1].version}}</li>
-                    <li>{{languages.[1].description}}</li>
+                    <tt>
+                        <h2>
+                            <li>{{languages.[0].name}}</li>
+                        </h2>
+                        <li class="my-3">{{languages.[0].version}}</li>
+                        <li>{{languages.[0].description}}</li>
+                    </tt>
                 </ul>
-            </tt>
-        </h3>
-        {{#each languages}}
+            </h3>
 
-        {{#each properties}}
-        <ul>
-            <b>{{name}}</b>
-            <li>{{description}}</li>
-        </ul>
-
-        {{#each values}}
-        <ul>
-            <b>{{value}}</b>
-            <li>{{description}}</li>
-        </ul>
+            {{#each languages}}
+            {{!-- {{>webs}} --}}
 
 
-        {{/each}}
-        {{/each}}
-        {{/each}}
-
-
-    </section>
-</div>
-<hr style="border-width: 3px;">
-<div class="js">
-    <section>
-        <h3>
+            {{#each elements}}
             <ul>
-                <tt>
-                    <h2>
-                        <li>{{languages.[2].name}}</li>
-                    </h2>
-                    <li>{{languages.[2].version}}</li>
-                    <li>{{languages.[2].description}}</li>
+                <li>
+                    <b>{{name}}</b>
+                </li>
+                <li>{{description}}</li>
             </ul>
-            </tt>
-        </h3>
-        {{#each languages}}
 
-        {{#each functions}}
-        <ul>
-            <b>{{name}}</b>
-            <li>{{description}}</li>
-        </ul>
+            {{#each attributes}}
+            <ul>
+                <li>
+                    <b>{{name}}</b>
+                </li>
+                <li>{{description}}</li>
+            </ul>
 
-        {{#each parameters}}
-        <ul>
-            <b>{{name}}</b>
-            <li>{{type}}</li>
-            <li>{{description}}</li>
-        </ul>
+            {{/each}}
+            {{/each}}
+            {{/each}}
+        </section>
+    </div>
+    <hr class="my-5">
+    <div>
+        <section>
+            <h3>
+                <tt>
+                    <ul>
+                        <h2>
+                            <li>{{languages.[1].name}}</li>
+                        </h2>
+                        <li class="my-3">{{languages.[1].version}}</li>
+                        <li>{{languages.[1].description}}</li>
+                    </ul>
+                </tt>
+            </h3>
+            {{#each languages}}
+
+            {{#each properties}}
+            <ul>
+                <b>{{name}}</b>
+                <li>{{description}}</li>
+            </ul>
+
+            {{#each values}}
+            <ul>
+                <b>{{value}}</b>
+                <li>{{description}}</li>
+            </ul>
 
 
-        {{/each}}
-        {{/each}}
-        {{/each}}
+            {{/each}}
+            {{/each}}
+            {{/each}}
 
 
-        {{!-- {{#each parameters}} --}}
-        {{name}}
-        {{description}}
+        </section>
+    </div>
+    <hr class="my-5">
+    <div class="">
+        <section>
+            <h3>
+                <ul>
+                    <tt>
+                        <h2>
+                            <li>{{languages.[2].name}}</li>
+                        </h2>
+                        <li class="my-3">{{languages.[2].version}}</li>
+                        <li>{{languages.[2].description}}</li>
+                </ul>
+                </tt>
+            </h3>
+            {{#each languages}}
+
+            {{#each functions}}
+            <ul>
+                <b>{{name}}</b>
+                <li>{{description}}</li>
+            </ul>
+
+            {{#each parameters}}
+            <ul>
+                <b>{{name}}</b>
+                <li>{{type}}</li>
+                <li>{{description}}</li>
+            </ul>
 
 
-        {{#each parameters}}
-        <ul>
-            <li>{{name}}</li>
-            <li>{{type}}</li>
-            <li>{{description}}</li>
-        </ul>
+            {{/each}}
+            {{/each}}
+            {{/each}}
 
 
-        {{!-- {{/each}} --}}
-        {{/each}}
-
-    </section>
-</div>
+            {{!-- {{#each parameters}} --}}
+            {{name}}
+            {{description}}
 
 
-{{/with}}
+            {{#each parameters}}
+            <ul>
+                <li>{{name}}</li>
+                <li>{{type}}</li>
+                <li>{{description}}</li>
+            </ul>
+
+
+            {{!-- {{/each}} --}}
+            {{/each}}
+
+        </section>
+    </div>
+
+
+    {{/with}}
+</main>
